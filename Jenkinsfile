@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo $PATH
 echo "==========="
-ls -al /usr/bin/docker
+ls -al /usr/local/bin/docker
 echo "==========="
 docker --version'''
       }
