@@ -1,18 +1,11 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:8.1.2-alpine'
-    }
-    
-  }
+  agent any
   stages {
     stage('build') {
       steps {
-        sh 'npm --version'
+        sh '''echo $PATH
+ls -al /usr/bin/docker'''
       }
     }
-  }
-  environment {
-    PATH = '/usr/local/bin'
   }
 }
