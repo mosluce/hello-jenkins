@@ -4,7 +4,10 @@ pipeline {
     stage('build') {
       steps {
         sh '''echo $PATH
-ls -al /usr/bin/docker'''
+echo "==========="
+ls -al /usr/bin/docker
+echo "==========="
+docker --version'''
       }
     }
   }
